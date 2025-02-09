@@ -1,9 +1,9 @@
-module.exports = {
+"use strict";module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('users', {
     id: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      autoIncrement: true, // 🔥 ESSENCIAL!
+      autoIncrement: true,
       primaryKey: true,
     },
     nome: {
@@ -13,12 +13,11 @@ module.exports = {
     email: {
       type: Sequelize.STRING,
       allowNull: false,
-      unique:true
+      unique: true,
     },
-    password_hash:{
-      type:Sequelize.STRING,
-      allowNull:true
-
+    password_hash: {
+      type: Sequelize.STRING,
+      allowNull: false,
     },
     created_at: {
       type: Sequelize.DATE,
